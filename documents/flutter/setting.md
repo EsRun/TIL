@@ -2,7 +2,9 @@
 
 ## flutter doctor
 
-- **Android toolchain 버전 에러 해결 방법**
+- **java 1.8 버전 사용 시 Android toolchain 에러 해결 방법**
+
+  에러 내용
 
   ```html
   Android sdkmanager tool not
@@ -11,4 +13,4 @@
   for detailed instructions.
   ```
 
-  - java 1.8 버전 사용 시 Android SDK Command-line Tools의 버전 9 이하 사용
+  android - setting - Android SDK 메뉴에서 하단의 Show Package Details를 체크하고 Android SDK Command-line Tools의 버전 9 이하 사용
