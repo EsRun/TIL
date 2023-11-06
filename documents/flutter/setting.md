@@ -13,5 +13,5 @@
   for detailed instructions.
   ```
 
-  메뉴 경로 : Tools - SDK Manager - Setting - Appearance & Behavior - System Settings - Android SDK
+  Tools - SDK Manager - Setting - Appearance & Behavior - System Settings - Android SDK
   하단의 Show Package Details를 체크하고 Android SDK Command-line Tools의 버전 9 이하 사용
