@@ -1,5 +1,5 @@
-## TIL
+# TIL
 Today I Learned
 
-### Flutter
-### Typescript
+## Flutter
+## Typescript
