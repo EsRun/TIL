@@ -6,8 +6,7 @@
 
 ```html
 ex) public abstract Riblis(); <-- 추상 메소드
-ex) public abstract Riblis(){
-String Eye = "i"; } <-- 비추상 메소드
+ex) public abstract Riblis(){ String Eye = "i"; } <-- 비추상 메소드
 ```
 
 ## 인터패이스 / 추상 클래스 공통점
