@@ -3,8 +3,12 @@
 ## 추상 메소드
 
 - 선언은 했지만 코드가 구현되어있지 않은 메소드를 의미
-  `html ex) public abstract Riblis(); <-- 추상 메소드`
-  `html ex) public abstract Riblis(){ String Eye = "i"; } <-- 비추상 메소드`
+
+```html
+ex) public abstract Riblis(); <-- 추상 메소드
+ex) public abstract Riblis(){
+String Eye = "i"; } <-- 비추상 메소드
+```
 
 ## 인터패이스 / 추상 클래스 공통점
 
