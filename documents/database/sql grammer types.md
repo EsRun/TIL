@@ -11,7 +11,7 @@
 ## DDL
 - 데이터베이스 구조 정의에 사용되는 언어
 - 테이블 작업을 할 때 사용
-- Create(생성), Alter(구조 변경), Drop(삭제), Truncate(초기화), Rename(이름 변경) 등
+- Create(생성), Alter(구조 변경), Drop(삭제), Truncate(초기화), Rename(이름 변경)
 
 ## DML
 - 데이터 조작에 사용되는 언어
