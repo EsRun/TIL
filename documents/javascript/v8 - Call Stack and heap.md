@@ -19,9 +19,9 @@
 ### Memory Heap
 |주소|값|
 |---|---|
-|1F0F00F0|10|
-|1F0F00F1|['a', 'b', 'c']|
-|1F0F0010|function(..){}|
+|1F0F00F1|10|
+|1F0F0010|['a', 'b', 'c']|
+|1F0F00F0|function(..){}|
 
 위 예시를 보면 변수 aaa(원시 타입)의 값 Call Stack에 저장 되지만, 나머지 변수 3개의 값 Memory Heap에 저장된다.
 
