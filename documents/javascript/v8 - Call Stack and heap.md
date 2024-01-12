@@ -23,7 +23,7 @@
 |1F0F0010|['a', 'b', 'c']|
 |1F0F00F0|function(..){}|
 
-위 예시를 보면 변수 aaa(원시 타입)의 값 Call Stack에 저장 되지만, 나머지 변수 3개의 값 Memory Heap에 저장된다.
+위 예시를 보면 변수 aaa(원시 타입)의 값은 Call Stack에 저장 되지만, 나머지 변수 3개의 값은 Memory Heap에 저장된다.
 
 두가지 타입 모두 변수(aaa, bbb, ccc, ddd) 자체는 Call Stack의 실행 컨텍스트의 렉시컬 환경에 저장된다.
 
