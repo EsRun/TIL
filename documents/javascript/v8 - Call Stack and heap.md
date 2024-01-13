@@ -29,4 +29,3 @@
 
 하지만 원시 타입의 값은 Call Stack의 실행 컨텍스트에 저장되고,
 참조 타입의 값은 Call Stack 에 Memory Heap 주소가 저장되고, 실제 값은 Memory Heap의 값에 존재한다.
-
