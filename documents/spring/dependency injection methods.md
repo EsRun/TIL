@@ -5,6 +5,44 @@
 - 필드 주입(Field Injection)
 - 수정자 주입(Setter Injection)
 
+## 생성자 주입(Contructor Injection)
+```html
+    @Controller
+    public class consController{
+        
+        private final consService service;
+
+        @Autowired
+        public consController(consService service){
+            this.service = service;
+        }
+    }
+```
+
+## 필드 주입(Field Injection)
+```html
+    @Controller
+    public class fieldController{
+
+        @Autowired
+        private fieldService service;
+    }
+```
+
+## 수정자 주입(Setter Injection)
+```html
+    @Controller
+    public class setContorller{
+        
+        private setService service;
+
+        @Autowired
+        public void setSetService(setService service){
+            this.service = service;
+        }
+    }
+```
+
 ## 요약
 - 생성자 주입을 추천하는 이유
 
