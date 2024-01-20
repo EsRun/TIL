@@ -2,10 +2,18 @@
 
 Today I Learned
 
-## Flutter
+## List
+- Theory
+- Browser
+- Database
+- Flutter
+- Java
+- JavaScript
+- TypeScript
+- Spring
+- Mybatis
+- Network
 
-## Typescript
 
-## Network
 
-## Java
+
