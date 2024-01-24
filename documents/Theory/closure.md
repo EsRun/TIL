@@ -6,6 +6,27 @@
     클로저는 함수와 그 함수가 선언됐을 때의 렉시컬 환경(Lexical environment)과의 조합이다.
 ```
 
+## 예시
+```html
+    function increaseCount() {
+        let count = 0;
+
+        return function() {
+            return count++;
+        };
+    }
+
+    let countA = increaseCount();
+    let countB = increaseCount();
+
+    console.log(countA()); // 0
+    console.log(countA()); // 1
+    console.log(countA()); // 2
+    console.log(countB()); // 0
+    console.log(countB()); // 1
+
+    결과를 보면 변수 countA와 countB는 각각 독립적인 함수를 갖는다.
+```
 
 ## 간단 정리
 - 자신이 선언됐을 때의 범위(scope) 밖에서 호출 되어도 그 범위(scope)에 접근할 수 있는 함수
