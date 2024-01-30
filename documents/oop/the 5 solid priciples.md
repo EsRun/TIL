@@ -46,7 +46,7 @@ abstract public class Phone{
     }
 }
 ```
-- 위 객체를 상속받아 사용하는 경우
+- 위 클래스를 상속받아 사용하는 경우
 ```html
     public class Samsung extends Phone{
 
