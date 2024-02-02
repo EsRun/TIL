@@ -1,11 +1,17 @@
 # mybatis 캐싱 처리
 
 ## 캐싱 처리 종류
-- Local Session Cache(무조건 활성화)
-- Second Level Cache(선택적 사용 가능)
+- 1차 레벨 캐싱 : Local Session Cache(무조건 활성화)
+- 2차 레벨 캐싱 : Second Level Cache(선택적 사용 가능)
 
-## Local Session Cache
+## 1차 레벨 캐싱(Local Session Cache)
+- 기본적으로 활성화 되어있음(개발자 임의로 비활성 불가능)
+- 특정 세션에 리턴 데이터를 저장하므로 동일한 데이터 요청 시 데이터베이스에 연결하지 않고 세션값으로 빠르게 리턴
 - sqlSession 객체마다 갖고 있는 Cache
-- 개발자 임의로 비활성 불가능
+- 세션이 닫히면 삭제
 
-## Second Level Cache
+## 2차 레벨 캐싱(Second Level Cache)
+- 기본적으로 비활성화(선택적 사용 가능)
+- 1차 레벨 캐싱과 다르게 다수의 세션에 공유되며(하나의 세션에 저장되는 것이 아님) 다른 세션에서 해당 세션 캐싱 데이터 사용 가능
+- 1차 레벨 캐싱과 다르게 특정 세션에 바인딩 되지 않음
+- 세션이 닫혀도 삭제되지 않음(전역 범위)
