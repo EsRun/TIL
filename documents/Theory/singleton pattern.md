@@ -34,6 +34,7 @@
     	return instance;
     }
 ```
+위 코드는 Synchronized 키워드를 사용해 속도가 느리다.
 
 2. 지연 초기화 + 더블 체크(Thread-Safe Lazy Initialization + Double-Checked locking)
 ```html
@@ -54,6 +55,7 @@
     }
 ```
 getInstance()에 synchronized를 사용하지 않고 instance가 null이 아닐 경우 synchronized를 사용하여 인스턴스를 생성
+하지만 Synchronized를 사용했기 때문에 여전히 속도가 느리다.
 
 3. holder에 의한 초기화(가장 많이 사용)
 ```html
@@ -72,3 +74,4 @@ getInstance()에 synchronized를 사용하지 않고 instance가 null이 아닐 
 2번과 같이 개발자가 직접 동기화 코드를 작성하면 신뢰성의 문제가 발생한다.
 
 그래서 위와 같이 static inner class를 활용해 로딩 시점에 한번만 호출하고 final을 사용해 다시 인스턴스가 생성되지 않도록 한다.
+Synchronized를 사용하지 않아 속도가 빠르다.
