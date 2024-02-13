@@ -17,3 +17,58 @@
 - 하나의 인스턴스를 많은 클래스가 참조하게되면 결합도가 높아져 개방 폐쇄 원칙(OCP)에 위배
 - 싱글톤은 인터페이스나 추상클래스가 아닌 구체 클래스를 사용하기 때문에 의존 역전 원칙(DIP)에 위배
 - TDD 단위 테스트가 어려움(전역으로 상태 공유를 하고 있기 때문에 테스트가 수행되려면 항상 인스턴스를 초기화 해야한다.)
+
+## 예시
+1. 지연 초기화(Thread-Safe Lazy Initialization)
+```html
+    public class SingleTon {
+
+    private static SingleTon instance;
+    
+    private SingleTon() {}
+    
+    public static synchronized SingleTon getInstance() {
+    	if(instance == null) {
+            instance = new SingleTon();
+    	}
+    	return instance;
+    }
+```
+
+2. 지연 초기화 + 더블 체크(Thread-Safe Lazy Initialization + Double-Checked locking)
+```html
+    public class SingleTon {
+
+    
+    private static SingleTon instance;
+    
+    private SingleTon() {}
+    
+    public static SingleTon getInstance() {
+    	if(instance == null) {
+    		synchronized (SingleTon.class) {
+				instance = new SingleTon();
+			}
+    	}
+    	return instance;
+    }
+```
+getInstance()에 synchronized를 사용하지 않고 instance가 null이 아닐 경우 synchronized를 사용하여 인스턴스를 생성
+
+3. holder에 의한 초기화(가장 많이 사용)
+```html
+    public class SingleTon {
+        private SingleTon(){}
+
+        private static class LazyHolder{
+            public static final SingleTon INSTANCE = new SingleTon();
+        }
+
+        public static SingleTon getInstance(){
+            return LazyHolder.INSTANCE;
+        }
+    }
+```
+2번과 같이 개발자가 직접 동기화 코드를 작성하면 신뢰성의 문제가 발생한다.
+
+그래서 위와 같이 static inner class를 활용해 로딩 시점에 한번만 호출하고 final을 사용해 다시 인스턴스가 생성되지 않도록 한다.
