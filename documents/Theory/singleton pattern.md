@@ -35,6 +35,7 @@
     }
 ```
 위 코드는 Synchronized 키워드를 사용해 속도가 느리다.
+Synchronized 키워드를 사용한 블록에는 다른 쓰레드에서 동시에 접근할 수 없다. 하나의 쓰레드만 접근 가능하다.
 
 2. 지연 초기화 + 더블 체크(Thread-Safe Lazy Initialization + Double-Checked locking)
 ```html
