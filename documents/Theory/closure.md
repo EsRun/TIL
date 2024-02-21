@@ -28,7 +28,7 @@
     결과를 보면 변수 countA와 countB는 각각 독립적인 함수를 갖는다.
     일반적으로 increaseCount() 함수가 실행되고 난 후 변수 count는 increaseCount() 함수와 함께 소면된다.
     하지만 변수 countA 에는 return function()의 return count++가 저장된다.
-    자신이 선언 돼었을 때의 범위(function increaseCount())를 기억해 호출 후에도 범위(function increaseCount(){let count = 0}) 안의 변수(let count)에 접근할 수 있는 개념
+    자신이 선언 돼었을 때의 범위(function increaseCount())를 기억해 호출 후에도 범위(function increaseCount(){let count = 0}) 안의 변수(let count)에 접근할 수 있다.
 ```
 
 ## 간단 정리
