@@ -9,7 +9,7 @@
 - RabbitMQ
 
 ## Apache Kafka
-- pub/sub 방식
+- 게시(publish) / 구독(subscribe) 방식
 - 분산 메시징 시스템
 - 대규모 분산 이벤트 스트리밍에 주로 사용
 - 스트리밍 데이터를 처리하는 곳에 적합
