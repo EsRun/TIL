@@ -1,5 +1,12 @@
 # 메시징 시스템(messaging system)
 
+## 사융 이유
+- 발신자와 수신자가 서로의 정보를 알 필요없이 독립적으로 시스템을 구성할 수 있다.(느슨한 결합, decoupling)
+- 수신자의 서비스에 장애가 발생하여도 발행된 메시지는 모두 Queue에 보관되어 있기 때문에 메시지 손실이 없다.
+- MSA 시스템에 효율적이다.
+- http 통신은 request 후 response를 기다리지만(동기 통신)
+- 메시지는 Queue에 메시지를 발행하고 수신자(구독)가 가져가는 방식(비동기 통신)
+
 ## 메시지 큐
 - 데이터 교환에 사용되는 통신 방법
 - Producer -> Queue -> Consumer 
@@ -42,5 +49,5 @@
 - Publisher -> AMQP Broker[Exchange -> Queues] -> Consumer
 - Publisher : 발행자는 특정 Exchange에 메시지를 발송한다.
 - Exchange : 메시지를 분류에 맞게 Queue로 전달한다.
-- Queue : 수신된 메세지를 저장하고 구독자에게 전달한다.
-- Consumer : Queue를 구독하고 메세지를 수신한다. 
+- Queue : 수신된 메시지를 저장하고 구독자에게 전달한다.
+- Consumer : Queue를 구독하고 메시지를 수신한다. 
