@@ -37,6 +37,9 @@
 - beforeInvocation : 메소드 수행 전 캐시 데이터 삭제(true), 메소드 수행 후 캐시 데이터 삭제(false)
 ## CachePut(캐시 저장)
 - Cacheable과 동일
+## Cacheable / CachePut 차이점
+- Cacheable : 캐시에 값이 있을 경우 메소드를 실행하지 않고 캐시된 값 반환
+- CachePut : 캐시 값 유무와 상관없이 무조건 메소드를 실행하고 결과값을 캐시에 저장
 ## Caching
 - cacheable : @Cacheable array 이름
 - evict : @CacheEvict array 이름
